@@ -17,13 +17,13 @@ get-papers-list "cancer immunotherapy" -f output.csv -d
 
 ## ✅ Output Columns
 
-Column	Description
-PubmedID	PubMed article ID
-Title	Title of the article
-Publication Date	Year of publication
-Non-academic Author(s)	Authors affiliated with companies
-Company Affiliation(s)	Detected company/institution strings
-Corresponding Author Email	Extracted email, if available
+|Column	|Description|
+|PubmedID|PubMed article ID|
+|Title	|Title of the article|
+|Publication Date |	Year of publication|
+|Non-academic Author(s)|	Authors affiliated with companies|
+|Company Affiliation(s)	|Detected company/institution strings
+|Corresponding Author Email	|Extracted email, if available
 
 ## 💡 Powered by
 * PubMed via BioPython
