@@ -17,12 +17,12 @@ A Python command-line tool to search PubMed and identify papers with authors aff
 ### 🛠️ Installation & Usage
 
 ## ✅ Step 1: Setup Your Environment
-# 🔧 1.1 Install Python
+### 🔧 1.1 Install Python
 Make sure Python 3.8 or higher is installed. You can check with:
 ```bash
 python --version
 ```
-# 📦 1.2 Install Poetry (for dependency & script management)
+### 📦 1.2 Install Poetry (for dependency & script management)
 Poetry handles packages and sets up projects cleanly.
 ```bash
 curl -sSL https://install.python-poetry.org | python3 -
@@ -200,7 +200,7 @@ Corresponding Author Email
 
 * Poetry (environment + dependency manager)
 
-## 🔧 Tools and Libraries Used
+### 🔧 Tools and Libraries Used
 # 🌐 Groq LLM API
 Used for affiliation classification using models like llama-3.3-70b-versatile. → Groq Developer Console → Groq Docs
 
