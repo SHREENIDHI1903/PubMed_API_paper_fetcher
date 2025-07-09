@@ -93,15 +93,16 @@ Then activate the shell:
 	poetry env info --path
     path\to\your\venv\Scripts\activate
 ```
-
+**Without shell activation you can also run the CLI command**
 ## Final O/P :- Run the CLI
 * Example 1 :- file called result.csv will be created in root directory 
 ```
 	get-papers-list "covid drug" -f result.csv -d
 ```
-* Example 2:-
+* Example 2:-Without shell activation 
 ```
-	get-papers-list "cancer immunotherapy" -f results.csv -d
+	poetry run get-papers-list "cancer immunotherapy" -f results.csv -d
+
 ```
 --------------------------------------------------------------
 ## Options
