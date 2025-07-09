@@ -39,14 +39,16 @@ poetry new pubmed-affiliation-checker
 cd pubmed-affiliation-checker
 ```
 Now your folder will look like:
+```
 pubmed-affiliation-checker/
 ├── pyproject.toml
 ├── pubmed_affiliation_checker/
 └── tests/
-
+```
 ## 📦 Step 3: Add Dependencies
 Update your pyproject.toml under [tool.poetry.dependencies]:
-```[tool.poetry.dependencies]
+```
+[tool.poetry.dependencies]
 python = "^3.10"
 biopython = "^1.81"
 click = "^8.1.3"
@@ -59,11 +61,15 @@ Then install everything:
 poetry install
 ```
 ## 🧠 Step 4: Get a Groq API Key
+```
 Go to https://console.groq.com
 Sign up / sign in → Go to API Keys
 Generate a key and copy it
 Then create a .env file at the root level:
-```env
+```
+env
+```
+
 GROQ_API_KEY=your_key_here
 ```
 ## 📁 Step 5: Create the CLI Script
@@ -82,8 +88,8 @@ Add to pyproject.toml:
 [tool.poetry.scripts]
 get-papers-list = "pubmed_affiliation_checker.cli:main"
 ```
-
-```Then activate the shell:
+Then activate the shell:
+```
 	poetry env info --path
     path\to\your\venv\Scripts\activate
 ```
@@ -209,8 +215,7 @@ For structured output and CSV export. → Pandas Docs
 # 🖱️ Click
 For building the CLI interface and handling user input. → Click Docs
 
-# 🔐 python-dotenv
-For secure local environment configuration (.env files). → python-dotenv
+
 
 ## 🌍 Author
 Made with ❤️ by Shreenidhi 
