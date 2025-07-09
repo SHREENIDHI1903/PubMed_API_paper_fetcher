@@ -13,19 +13,98 @@ A Python command-line tool to search PubMed and identify papers with authors aff
 - ⚙️ CLI options for file saving, debugging, and help
 
 ---
+----------------------------------------------------
+### 🛠️ Installation & Usage
 
-## 🔧 Usage
-
+## ✅ Step 1: Setup Your Environment
+# 🔧 1.1 Install Python
+Make sure Python 3.8 or higher is installed. You can check with:
 ```bash
-get-papers-list "cancer immunotherapy" -f output.csv -d
+python --version
+```
+# 📦 1.2 Install Poetry (for dependency & script management)
+Poetry handles packages and sets up projects cleanly.
+```bash
+curl -sSL https://install.python-poetry.org | python3 -
+```
+Then confirm it works:
+```bash
+poetry --version
 ```
 
+## 📁 Step 2: Create a New Project
+In your terminal:
+```bash
+poetry new pubmed-affiliation-checker
+cd pubmed-affiliation-checker
+```
+Now your folder will look like:
+pubmed-affiliation-checker/
+├── pyproject.toml
+├── pubmed_affiliation_checker/
+└── tests/
+
+## 📦 Step 3: Add Dependencies
+Update your pyproject.toml under [tool.poetry.dependencies]:
+```[tool.poetry.dependencies]
+python = "^3.10"
+biopython = "^1.81"
+click = "^8.1.3"
+pandas = "^2.0.0"
+requests = "^2.31"
+python-dotenv = "^1.0.0"
+```
+Then install everything:
+```bash
+poetry install
+```
+## 🧠 Step 4: Get a Groq API Key
+Go to https://console.groq.com
+Sign up / sign in → Go to API Keys
+Generate a key and copy it
+Then create a .env file at the root level:
+```env
+GROQ_API_KEY=your_key_here
+```
+## 📁 Step 5: Create the CLI Script
+Create a file called cli.py inside src/pubmed_affiliation_checker:
+
+## 🌐 Step 6: Fetch Data from PubMed
+Create fetch.py inside src/pubmed_affiliation_checker:
+
+
+## 🔗 Step 7: Integrate Groq LLM 
+Create llm.py inside src/pubmed_affiliation_checker:
+
+## 🚀 Step 8: Run Your Program!
+Add to pyproject.toml:
+```toml
+[tool.poetry.scripts]
+get-papers-list = "pubmed_affiliation_checker.cli:main"
+```
+
+```Then activate the shell:
+	poetry env info --path
+    path\to\your\venv\Scripts\activate
+```
+
+## Final O/P :- Run the CLI
+* Example 1 :- file called result.csv will be created in root directory 
+```
+	get-papers-list "covid drug" -f result.csv -d
+```
+* Example 2:-
+```
+	get-papers-list "cancer immunotherapy" -f results.csv -d
+```
+--------------------------------------------------------------
 ## Options
 * -f / --file: Save output to CSV
 
 * -d / --debug: Enable LLM debug logs
 
 * -h / --help: Show CLI help
+
 
 ## ✅ Output Columns
 
@@ -48,7 +127,7 @@ Corresponding Author Email
 
 * Python, Click, Poetry
 
-## 🧱 Development Steps Followed
+###  🧱 Development Steps Followed
 ## 📁 Phase 1: Project Bootstrapping
 * Created structured Poetry project with --src layout
 
@@ -113,6 +192,25 @@ Corresponding Author Email
 * Groq API (LLM-based classification)
 
 * Poetry (environment + dependency manager)
+
+## 🔧 Tools and Libraries Used
+# 🌐 Groq LLM API
+Used for affiliation classification using models like llama-3.3-70b-versatile. → Groq Developer Console → Groq Docs
+
+# 🧬 Biopython
+For interacting with PubMed’s Entrez API and processing MEDLINE data. → Biopython Website
+
+# 📦 Poetry
+Dependency management and CLI packaging. → Poetry Documentation
+
+# 🐼 Pandas
+For structured output and CSV export. → Pandas Docs
+
+# 🖱️ Click
+For building the CLI interface and handling user input. → Click Docs
+
+# 🔐 python-dotenv
+For secure local environment configuration (.env files). → python-dotenv
 
 ## 🌍 Author
 Made with ❤️ by Shreenidhi 
