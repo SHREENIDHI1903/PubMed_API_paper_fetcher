@@ -1,2 +1,4 @@
 .env
-
+.pypirc
+dist
+.pytest_cache

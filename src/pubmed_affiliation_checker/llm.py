@@ -1,11 +1,12 @@
 # src/pubmed_affiliation_checker/llm.py
-
+from dotenv import load_dotenv
 import os
 import requests
-from dotenv import load_dotenv
 from typing import Optional
+from pathlib import Path
 
-load_dotenv()
+env_path = Path(__file__).resolve().parent.parent.parent / ".env"
+load_dotenv(dotenv_path=env_path)
 
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 MODEL = "llama-3.3-70b-versatile"  # Replace with another if preferred
