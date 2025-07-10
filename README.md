@@ -13,6 +13,34 @@ A Python command-line tool to search PubMed and identify papers with authors aff
 - ⚙️ CLI options for file saving, debugging, and help
 
 ---
+## 📦 Installation
+You can install the package from TestPyPI to test it before it’s published officially:
+
+### ✅ Step 1: Install via pip
+Use Python 3.10 or higher and run:
+
+```bash
+pip install --index-url https://test.pypi.org/simple pubmed-affiliation-checker
+```
+🔒 Use --upgrade if you're updating to a newer version ✅ --no-cache-dir can help if you're troubleshooting CLI issues
+
+## ✅ Step 2: Verify CLI Installation
+After install, verify the CLI is available:
+
+```bash
+get-papers-list --help 
+```
+Expected output:
+```
+Usage: get-papers-list [OPTIONS] QUERY
+Search PubMed and detect pharmaceutical/biotech-affiliated authors using Groq LLM.
+
+```
+
+
+
+
+
 ----------------------------------------------------
 ### 🛠️ Installation & Usage
 
