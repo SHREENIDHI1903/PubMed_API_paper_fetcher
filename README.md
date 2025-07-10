@@ -13,7 +13,7 @@ A Python command-line tool to search PubMed and identify papers with authors aff
 - ⚙️ CLI options for file saving, debugging, and help
 
 ---
-## 📦 Installation
+## 📦 Installation 
 You can install the package from TestPyPI to test it before it’s published officially:
 
 ### ✅ Step 1: Install via pip
@@ -24,7 +24,7 @@ pip install --index-url https://test.pypi.org/simple pubmed-affiliation-checker
 ```
 🔒 Use --upgrade if you're updating to a newer version ✅ --no-cache-dir can help if you're troubleshooting CLI issues
 
-## ✅ Step 2: Verify CLI Installation
+### ✅ Step 2: Verify CLI Installation
 After install, verify the CLI is available:
 
 ```bash
@@ -34,15 +34,41 @@ Expected output:
 ```
 Usage: get-papers-list [OPTIONS] QUERY
 Search PubMed and detect pharmaceutical/biotech-affiliated authors using Groq LLM.
-
 ```
+### ✅ Step 3: Provide Your GROQ_API_KEY
+Go to https://console.groq.com
+Sign up / sign in → Go to API Keys
+Generate a key and copy it
+* Set the Key System-Wide
 
+```bash
+# macOS/Linux
+export GROQ_API_KEY=your_actual_groq_key_here
 
+# Windows CMD
+set GROQ_API_KEY=your_actual_groq_key_here
 
+# Windows PowerShell
+$env:GROQ_API_KEY = "your_actual_groq_key_here"
+```
+### ✅ Step 4: Run the CLI
+Once installed and configured:
 
+```bash
+get-papers-list "cancer immunotherapy" --file results.csv --debug
+```
+This will:
+
+* Search PubMed for matching papers
+
+* Use Groq's LLM to classify affiliations
+
+* Output results to a CSV file
+
+* Show debug logs from Groq responses
 
 ----------------------------------------------------
-### 🛠️ Installation & Usage
+### 🛠️ Steps followed to create the Project
 
 ## ✅ Step 1: Setup Your Environment
 ### 🔧 1.1 Install Python
