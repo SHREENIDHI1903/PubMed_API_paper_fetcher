@@ -36,10 +36,11 @@ Usage: get-papers-list [OPTIONS] QUERY
 Search PubMed and detect pharmaceutical/biotech-affiliated authors using Groq LLM.
 ```
 ### ✅ Step 3: Provide Your GROQ_API_KEY
-Go to https://console.groq.com
-Sign up / sign in → Go to API Keys
-Generate a key and copy it
-* Set the Key System-Wide
+* Go to https://console.groq.com
+* Sign up / sign in → Go to API Keys
+* Generate a key and copy it
+
+** Set the Key System-Wide **
 
 ```bash
 # macOS/Linux
